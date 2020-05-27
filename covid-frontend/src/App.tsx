@@ -6,33 +6,26 @@ import axios from 'axios';
 function App() {
   //const axios = require('axios').default;
   //axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
-  /** 
+  /**
   axios.get('http://localhost:5000/')
     .then(function (response: any) {
       // handle success
       console.log(response);
     })
     .catch(function (error: any) {
-      // handle error 
+      // handle error
       console.log(error);
     })
     .finally(function () {
       // always executed
       console.log('finally...');
     });*/
-  let instance = axios.create({baseURL: 'http://localhost:5000/'});
-  instance
-    .get('', {
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Headers': '*',
-      }
-    })
-    .then(res => {
-      console.log(res.data)
-    })
-    .catch((error) => {
-      console.log(error)
+  // let instance = axios.create({baseURL: 'http://localhost:5000'});
+  axios
+    .get('http://localhost:5000/')
+    .then(function (response: any) {
+      // handle success
+      console.log(response);
     })
 
   return (
