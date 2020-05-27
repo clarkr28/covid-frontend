@@ -1,10 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.scss';
+import axios from 'axios';
 
 function App() {
-  const axios = require('axios').default;
-  axios.get('localhost:5000/')
+  //const axios = require('axios').default;
+  //axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+  /** 
+  axios.get('http://localhost:5000/')
     .then(function (response: any) {
       // handle success
       console.log(response);
@@ -16,7 +19,21 @@ function App() {
     .finally(function () {
       // always executed
       console.log('finally...');
-    });
+    });*/
+  let instance = axios.create({baseURL: 'http://localhost:5000/'});
+  instance
+    .get('', {
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': '*',
+      }
+    })
+    .then(res => {
+      console.log(res.data)
+    })
+    .catch((error) => {
+      console.log(error)
+    })
 
   return (
     <div className="App">
