@@ -1,0 +1,44 @@
+@import '../consts.scss';
+
+.list-picker {
+    color: $default-color;
+    background-color: darkslategray;
+    width: 250px;
+    margin: 10px;
+}
+
+.title {
+    font-size: 25px;
+}
+
+.list-window {
+    height: 175px;
+    overflow-y: auto;
+    border-top: 1px solid #888
+}
+
+.list-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid #888;
+}
+
+.item-name {
+    font-size: 18px;
+}
+
+.add-icon {
+    font-size: 18px;
+    &:hover {
+        color: #0f0;
+    }
+}
+
+.remove-icon {
+    font-size: 18px;
+    &:hover {
+        color: red;
+    }
+}

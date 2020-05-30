@@ -1,5 +1,9 @@
+@import './consts.scss';
+
 .App {
   text-align: center;
+  background-color: $background-color;
+  height: 100vh;
 }
 
 .App-logo {
@@ -14,8 +18,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: $background-color;
+  min-height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
