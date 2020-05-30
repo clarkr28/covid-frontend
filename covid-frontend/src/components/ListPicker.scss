@@ -31,14 +31,16 @@
 
 .add-icon {
     font-size: 18px;
+    color: #0f0;
     &:hover {
-        color: #0f0;
+        color: white;
     }
 }
 
 .remove-icon {
     font-size: 18px;
+    color: red;
     &:hover {
-        color: red;
+        color: white;
     }
 }

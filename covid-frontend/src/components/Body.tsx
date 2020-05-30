@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Body.scss';
 import Controls from './Controls';
 import PlotRegion from './PlotRegion';
 
 function Body() {
+    const initialStates: string[] = [];
+    const [selectedStates, setSelectedStates] = useState(initialStates);
     return (
         <div className="body">
-            <Controls/>
+            <Controls selectedStates={selectedStates} setSelectedStates={setSelectedStates}/>
             <PlotRegion/> 
         </div>
     );
