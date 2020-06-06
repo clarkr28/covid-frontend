@@ -1,18 +1,15 @@
 import React from 'react';
 import './Controls.scss';
-import { ListPicker } from './ListPicker';
-import { stateAbbrev } from '../consts';
+import { StatePicker } from './StatePicker';
+import { CountyPicker } from './CountyPicker';
+import { SelectedPlacesPicker } from './SelectedPlacesPicker';
 
-export interface ControlsProps {
-    selectedStates: string[]
-    setSelectedStates: React.Dispatch<React.SetStateAction<string[]>>
-}
-
-export const Controls: React.FC<ControlsProps> = ({selectedStates, setSelectedStates}) => {
+export const Controls: React.FC = () => {
     return (
         <div className="controls">
-            <ListPicker title="States" addSelection={true} listItems={Object.values(stateAbbrev).sort()} selectedStates={selectedStates} setSelectedStates={setSelectedStates}/>
-            <ListPicker title="Selected" addSelection={false} listItems={selectedStates} selectedStates={selectedStates} setSelectedStates={setSelectedStates}/>
+            <StatePicker/>
+            <CountyPicker/>
+            <SelectedPlacesPicker/>
         </div>
     );
 }
