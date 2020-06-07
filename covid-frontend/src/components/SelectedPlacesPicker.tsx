@@ -4,7 +4,7 @@ import { useStores } from '../use-stores';
 import './ListPicker.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinusCircle } from '@fortawesome/free-solid-svg-icons';
-import { SelectedRegion } from '../SelectionStore';
+import { Region } from '../SelectionStore';
 
 export const SelectedPlacesPicker = observer(() => {
     const {selectionStore} = useStores();
@@ -17,7 +17,7 @@ export const SelectedPlacesPicker = observer(() => {
 });
 
 interface ListItemProps {
-    region: SelectedRegion
+    region: Region
 }
 
 const ListItem: React.FC<ListItemProps> = ({region}) => {

@@ -1,6 +1,12 @@
 @import '../consts.scss';
 
 .plot-region {
-    background-color: orangered;
+    background-color: $background-color;
     color: $default-color;
+}
+
+.chart-container {
+    background-color: $background-color;
+    width: 800px;
+    margin: 0 auto;
 }

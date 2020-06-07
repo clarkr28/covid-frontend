@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.scss';
-import axios from 'axios';
 import Body from './components/Body';
 
 function App() {
+  /*
   axios
     .get('http://localhost:5000/groundhog/v1/state/Minnesota')
     .then(function (response: any) {
@@ -13,6 +13,7 @@ function App() {
     .catch((error: any) => {
       console.log(error)
     })
+    */
 
   return (
     <div className="App">
